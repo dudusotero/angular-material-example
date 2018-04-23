@@ -1,0 +1,5 @@
+<mat-toolbar color="primary" *ngIf="isLoggedIn | async">
+  <span>VHL Qualidade</span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button (click)="onLogout()">Logout</button>
+</mat-toolbar>
