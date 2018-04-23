@@ -9,7 +9,7 @@ import { AuthService } from './../auth/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  private vhlForm: FormGroup;
+  vhlForm: FormGroup;
   private formSubmitAttempt: boolean;
 
   constructor(private fb: FormBuilder, private authService: AuthService) { }
