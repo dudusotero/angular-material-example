@@ -1,13 +1,63 @@
+@import '../../vars.scss';
 mat-card {
-    max-width: 400px;
-    margin: 2em auto;
+    max-width: 300px;
     text-align: center;
+    background-color: rgba($color-blue-darken, .8);
+    border-radius: 8px;
+    color: $color-white;
 }
 
 .signin-content {
-    padding: 60px 1rem;
+    padding: 0 1rem;
+    ::ng-deep {
+        .mat-input-container,
+        .mat-focused,
+        .mat-form-field-invalid {
+            .mat-input-element {
+                caret-color: $color-white;
+            }
+            .mat-form-field-label {
+                color: $color-white;
+            }
+            .mat-form-field-underline {
+                background: $color-white;
+                .mat-form-field-ripple {
+                    background: $color-white;
+                }
+            }
+        }
+    }
 }
 
-.full-width-input {
-    width: 100%;
+.login-input {
+    width: calc(100% - 28px);
+}
+
+mat-icon {
+    position: relative;
+    top: 8px;
+}
+
+button {
+    background-color: $color-green;
+    color: $color-white;
+    margin: 40px 0 40px 0;
+    padding: 0 40px;
+}
+
+.forget-password {
+    display: block;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.profile-picture {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    border: 2px solid $color-white;
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    margin-bottom: 5px;
 }
