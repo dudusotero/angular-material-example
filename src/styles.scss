@@ -23,8 +23,29 @@ app-login {
     background-size: cover;
 }
 
-.mat-card {
+mat-card {
     margin: 8px;
+    &.mat-card-widget {
+        .search-field {
+            width: 100%;
+        }
+        .mat-table {
+            overflow: auto;
+            max-height: 500px;
+            .actions-column {
+                flex: none;
+                flex-basis: 85px;
+                text-align: right;
+            }
+        }
+        .button-new {
+            bottom: 0;
+            margin-bottom: 24px;
+            margin-right: 24px;
+            position: fixed;
+            right: 0;
+        }
+    }
 }
 
 .vhl-form {
@@ -39,59 +60,5 @@ app-login {
     }
     .vhl-form-footer {
         padding-top: 24px;
-    }
-}
-
-.mat-form-field {
-    width: 100%;
-}
-
-.mat-table {
-    overflow: auto;
-    max-height: 500px;
-    .actions-column {
-        flex: none;
-        flex-basis: 85px;
-        text-align: right;
-    }
-}
-
-.button-new {
-    bottom: 0;
-    margin-bottom: 24px;
-    margin-right: 24px;
-    position: fixed;
-    right: 0;
-}
-
-.widget {
-    margin: 10px;
-}
-
-.mat-paginator {
-    display: block;
-    float: right;
-    background: transparent;
-}
-
-.fill-remaining-space {
-    flex: 1 1 auto;
-}
-
-.grupo-de-botoes-footer {
-    margin: 20px 24px;
-    min-height: 55px;
-}
-
-mat-card {
-    border-bottom: 1px solid $color-black;
-    padding: 0px 24px;
-}
-
-mat-row {
-    .mat-row.ng-star-inserted {
-        &:last-child {
-            border-bottom: none;
-        }
     }
 }
