@@ -1,4 +1,4 @@
-import { IUsuario } from './usuario.interface';
+import { ILogin } from './login.interface';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -14,7 +14,7 @@ export class AuthService {
 
   constructor(private router: Router) { }
 
-  login(usuario: IUsuario) {
+  login(usuario: ILogin) {
     if (usuario.login !== '' && usuario.senha !== '') {
       this.loggedIn.next(true);
       this.router.navigate(['/']);

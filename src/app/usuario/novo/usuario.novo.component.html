@@ -1,0 +1,32 @@
+<mat-card>
+  <form class="vhl-form" [formGroup]="vhlForm" (ngSubmit)="salvar(vhlForm)">
+
+    <div class="vhl-form-content">
+
+      <mat-form-field>
+        <input matInput formControlName="nome" placeholder="Nome" autocomplete="off">
+        <mat-error>
+          Campo obrigatório
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="login" placeholder="Login" autocomplete="off">
+        <mat-error>
+          Campo obrigatório
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="vhl-form-footer">
+
+      <button mat-raised-button (click)="cancelar()">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="vhlForm.invalid">Salvar</button>
+
+    </div>
+
+  </form>
+</mat-card>
