@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioService } from './usuario/usuario.service';
+import { DepartamentoComponent } from './departamento/departamento.component';
+import { DepartamentoNovoComponent } from './departamento/novo/departamento.novo.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { UsuarioService } from './usuario/usuario.service';
     HomeComponent,
     HeaderComponent,
     UsuarioComponent,
-    UsuarioNovoComponent
+    UsuarioNovoComponent,
+    DepartamentoComponent,
+    DepartamentoNovoComponent
   ],
   imports: [
     BrowserModule,

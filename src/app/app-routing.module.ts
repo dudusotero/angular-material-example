@@ -1,3 +1,5 @@
+import { DepartamentoNovoComponent } from './departamento/novo/departamento.novo.component';
+import { DepartamentoComponent } from './departamento/departamento.component';
 import { UsuarioNovoComponent } from './usuario/novo/usuario.novo.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
@@ -15,12 +17,22 @@ const routes: Routes = [
   {
     path: 'usuario',
     component: UsuarioComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   {
     path: 'usuario/novo',
     component: UsuarioNovoComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'departamento',
+    component: DepartamentoComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'departamento/novo',
+    component: DepartamentoNovoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login', component: LoginComponent
