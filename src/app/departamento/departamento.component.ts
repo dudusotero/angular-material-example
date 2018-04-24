@@ -14,7 +14,7 @@ export class DepartamentoComponent implements AfterViewInit {
 
   departamentos: Array<IDepartamento> = [];
 
-  displayedColumns: Array<string> = ['id', 'nome', 'status', 'acoes'];
+  displayedColumns: Array<string> = ['nome', 'status', 'acoes'];
   dataSource: MatTableDataSource<IDepartamento>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

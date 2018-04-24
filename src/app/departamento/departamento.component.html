@@ -1,15 +1,8 @@
+<mat-card class="mat-card-widget">
 
-<div class="">
-
-  <mat-form-field>
-    <input matInput (keyup)="filtrar($event.target.value)" placeholder="Filtrar">
-  </mat-form-field>
-
-</div>
-
-<div class="widget widget mat-elevation-z2">   
-
-  <mat-card class="mat-card-widget mat-elevation-z0">
+    <mat-form-field class="search-field">
+      <input matInput (keyup)="filtrar($event.target.value)" placeholder="Filtrar">
+    </mat-form-field>  
 
     <mat-table [dataSource]="dataSource" matSort>
 
@@ -42,13 +35,10 @@
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>   
+    </mat-table>
 
-</mat-card>
-<mat-divider></mat-divider>
-<div class="grupo-de-botoes-footer">
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  
     <button mat-raised-button color="primary" (click)="adicionar()">Adicionar</button>
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>   
-</div>
-
-</div>
+  
+  </mat-card>
