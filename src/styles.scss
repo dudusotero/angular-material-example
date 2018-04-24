@@ -5,13 +5,14 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import 'vars.scss';
 @import '~@angular/material/theming';
-$custom-typography: mat-typography-config( $font-family: 'Noto Sans');
+$custom-typography: mat-typography-config( $font-family: 'Noto Sans, sans-serif');
 @include mat-core($custom-typography);
 html,
 body {
     height: 100%;
     margin: 0;
     background-color: $color-white;
+    font-family: "Noto Sans", sans-serif;
 }
 
 app-login {
@@ -24,17 +25,20 @@ app-login {
     background-size: cover;
 }
 
-.search-field {
-    margin: 0 32px;
-    mat-form-field {
-        width: 100%;
-        margin-top: 20px;
-    }
-}
-
 .container {
+    margin: 0 32px;
+    .container-title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .search-field {
+        margin: 0;
+        mat-form-field {
+            width: 100%;
+        }
+    }
     mat-card {
-        margin: 0 32px;
+        margin: 0;
         padding: 0;
         mat-table {
             overflow: auto;
@@ -49,20 +53,17 @@ app-login {
             margin: 0;
             padding: 20px;
         }
-    }
-}
-
-.vhl-form {
-    .vhl-form-content {
-        padding-bottom: 20px;
-        mat-form-field {
-            display: block;
+        mat-card-content {
+            margin: 0;
         }
-        mat-slide-toggle {
-            padding-bottom: 20px;
+        .vhl-form {
+            padding-top: 24px;
+            mat-card-content {
+                margin: 0 24px 24px 24px;
+                mat-form-field {
+                    display: block;
+                }
+            }
         }
-    }
-    .vhl-form-footer {
-        padding-top: 24px;
     }
 }
