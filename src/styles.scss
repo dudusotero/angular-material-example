@@ -30,7 +30,7 @@ app-login {
 .vhl-form {
     .vhl-form-content {
         padding-bottom: 20px;
-        mat-form-field {    
+        mat-form-field {
             display: block;
         }
         mat-slide-toggle {
@@ -56,8 +56,6 @@ app-login {
     }
 }
 
-/* INICIO -> Botões */
-
 .button-new {
     bottom: 0;
     margin-bottom: 24px;
@@ -66,10 +64,8 @@ app-login {
     right: 0;
 }
 
-/* INICIO -> widgets */
-
-.widget{
-    margin: 10px;  
+.widget {
+    margin: 10px;
 }
 
 .mat-paginator {
@@ -82,16 +78,20 @@ app-login {
     flex: 1 1 auto;
 }
 
-.grupo-de-botoes-footer{
+.grupo-de-botoes-footer {
     margin: 20px 24px;
     min-height: 55px;
 }
 
-mat-card{
-    border-bottom: 1px solid rgba(0,0,0,.12);
+mat-card {
+    border-bottom: 1px solid $color-black;
     padding: 0px 24px;
 }
 
-mat-row.mat-row.ng-star-inserted:last-child {
-    border-bottom: none;
+mat-row {
+    .mat-row.ng-star-inserted {
+        &:last-child {
+            border-bottom: none;
+        }
+    }
 }
