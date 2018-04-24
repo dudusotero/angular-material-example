@@ -6,14 +6,10 @@ body {
     margin: 0;
 }
 
-.mat-card {
-    margin: 8px;
-}
-
 .vhl-form {
     .vhl-form-content {
         padding-bottom: 20px;
-        mat-form-field {
+        mat-form-field {    
             display: block;
         }
         mat-slide-toggle {
@@ -23,4 +19,58 @@ body {
     .vhl-form-footer {
         padding-top: 24px;
     }
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 500px;
+    .actions-column {
+        flex: none;
+        flex-basis: 85px;
+        text-align: right;
+    }
+}
+
+/* INICIO -> Botões */
+
+.button-new {
+    bottom: 0;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    position: fixed;
+    right: 0;
+}
+
+/* INICIO -> widgets */
+
+.widget{
+    margin: 10px;  
+}
+
+.mat-paginator {
+    display: block;
+    float: right;
+    background: transparent;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.grupo-de-botoes-footer{
+    margin: 20px 24px;
+    min-height: 55px;
+}
+
+mat-card{
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding: 0px 24px;
+}
+
+mat-row.mat-row.ng-star-inserted:last-child {
+    border-bottom: none;
 }

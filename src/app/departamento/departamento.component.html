@@ -1,3 +1,56 @@
-<p>
-  departamento works!
-</p>
+
+<div class="">
+
+  <mat-form-field>
+    <input matInput (keyup)="filtrar($event.target.value)" placeholder="Filtrar">
+  </mat-form-field>
+
+</div>
+
+<div class="widget widget mat-elevation-z2">   
+
+  <mat-card class="mat-elevation-z0">
+
+    <mat-table [dataSource]="dataSource" matSort>
+
+      <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Id </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="nome">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.nome}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="acoes">
+        <mat-header-cell *matHeaderCellDef class="actions-column"></mat-header-cell>
+        <mat-cell *matCellDef="let row" class="actions-column">
+          <button mat-icon-button matTooltip="Editar" (click)="editar(row.id)">
+            <mat-icon aria-label="Editar">edit</mat-icon>
+          </button>
+          <button mat-icon-button matTooltip="Excluir" (click)="deletar(row.id)">
+            <mat-icon aria-label="Excluir">delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    
+
+</mat-card>
+
+<div class="grupo-de-botoes-footer">
+    <button mat-raised-button color="primary" (click)="adicionar()">Adicionar</button>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>   
+</div>
+
+</div>
