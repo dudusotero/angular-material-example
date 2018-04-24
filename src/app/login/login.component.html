@@ -1,20 +1,22 @@
 <div class="signin-content">
-  <mat-card>
+  <mat-card class="mat-elevation-z24">
     <mat-card-content>
+      <div class="profile-picture"></div>
+      <span>Shiba Inu</span>
       <form [formGroup]="vhlForm" (ngSubmit)="onSubmit()">
-        <mat-input-container class="full-width-input">
-          <input matInput placeholder="Usuário" formControlName="login" required>
-          <mat-error *ngIf="isFieldInvalid('login')">
-            Por favor, informe um usuário
-          </mat-error>
+
+        <mat-icon>person</mat-icon>
+        <mat-input-container class="login-input">
+          <input matInput placeholder="Usuário" formControlName="login">
         </mat-input-container>
-        <mat-input-container class="full-width-input">
-          <input matInput type="password" placeholder="Senha" formControlName="senha" required>
-          <mat-error *ngIf="isFieldInvalid('senha')">
-            Por favor, informe uma senha
-          </mat-error>
+
+        <mat-icon>lock_outline</mat-icon>
+        <mat-input-container class="login-input">
+          <input matInput type="password" placeholder="Senha" formControlName="senha">
         </mat-input-container>
-        <button mat-raised-button color="primary" type="submit">Login</button>
+
+        <button mat-raised-button type="submit">Entrar</button>
+        <span class="forget-password">Esqueceu a senha?</span>
       </form>
     </mat-card-content>
   </mat-card>

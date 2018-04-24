@@ -2,8 +2,29 @@
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import 'vars.scss';
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config( $font-family: 'Noto Sans');
+@include mat-core($custom-typography);
+html,
 body {
+    height: 100%;
     margin: 0;
+}
+
+app-login {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assets/img/login-page-bg.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+.mat-card {
+    margin: 8px;
 }
 
 .vhl-form {
