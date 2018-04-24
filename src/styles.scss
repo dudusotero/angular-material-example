@@ -11,6 +11,7 @@ html,
 body {
     height: 100%;
     margin: 0;
+    background-color: $color-white;
 }
 
 app-login {
@@ -23,13 +24,19 @@ app-login {
     background-size: cover;
 }
 
-mat-card {
-    margin: 8px;
-    &.mat-card-widget {
-        .search-field {
-            width: 100%;
-        }
-        .mat-table {
+.search-field {
+    margin: 0 32px;
+    mat-form-field {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.container {
+    mat-card {
+        margin: 0 32px;
+        padding: 0;
+        mat-table {
             overflow: auto;
             max-height: 500px;
             .actions-column {
@@ -38,12 +45,9 @@ mat-card {
                 text-align: right;
             }
         }
-        .button-new {
-            bottom: 0;
-            margin-bottom: 24px;
-            margin-right: 24px;
-            position: fixed;
-            right: 0;
+        mat-card-footer {
+            margin: 0;
+            padding: 20px;
         }
     }
 }

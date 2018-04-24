@@ -30,12 +30,13 @@ mat-card {
 }
 
 .login-input {
-    width: calc(100% - 28px);
+    width: calc(100% - 40px);
 }
 
 mat-icon {
+    float: left;
     position: relative;
-    top: 8px;
+    top: 18px;
 }
 
 button {
